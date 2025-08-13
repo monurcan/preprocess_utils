@@ -20,7 +20,9 @@ class FrameAlignmentStrategy(ABC):
     """Abstract base class for frame alignment strategies."""
 
     @abstractmethod
-    def __call__(self, reference_image: np.ndarray, current_image: np.ndarray) -> np.ndarray:
+    def __call__(
+        self, reference_image: np.ndarray, current_image: np.ndarray
+    ) -> np.ndarray:
         """
         Align current frame to the reference image.
 
@@ -67,7 +69,9 @@ class FrameAlignmentFactory:
 class DummyAlignment(FrameAlignmentStrategy):
     """Placeholder alignment that returns the current image unchanged."""
 
-    def __call__(self, reference_image: np.ndarray, current_image: np.ndarray) -> np.ndarray:
+    def __call__(
+        self, reference_image: np.ndarray, current_image: np.ndarray
+    ) -> np.ndarray:
         """Return the current image unchanged."""
         return current_image
 
@@ -97,7 +101,9 @@ class SuperPointLGAlignment(FrameAlignmentStrategy):
         self.matcher = get_matcher("superpoint-lg", device=device)
         self.cv = cv
 
-    def __call__(self, reference_image: np.ndarray, current_image: np.ndarray) -> np.ndarray:
+    def __call__(
+        self, reference_image: np.ndarray, current_image: np.ndarray
+    ) -> np.ndarray:
         """
         Align current frame to reference using SuperPoint-LG matcher.
 
