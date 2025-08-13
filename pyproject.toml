@@ -1,0 +1,30 @@
+[project]
+name = "lez-paper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pillow",
+    "openexr",
+    "tqdm",
+    "opencv-python",
+    "onnxruntime",
+    "torch>=2.8.0",
+    "psutil>=7.0.0",
+    "autodistill-grounded-sam-2",
+    "autodistill",
+    "scikit-learn>=1.7.1",
+    "autodistill-yolov8>=0.1.4",
+    "rf-groundingdino>=0.2.0",
+    "samv2>=0.0.4",
+    "autodistill-florence-2>=0.1.1",
+    "pytest>=8.4.1",
+    "image-matching-models",
+    "poselib>=2.0.4",
+]
+
+[tool.uv.sources]
+autodistill-grounded-sam-2 = { git = "https://github.com/monurcank/autodistill-grounded-sam-2.git" }
+image-matching-models = { git = "https://github.com/alexstoken/image-matching-models.git", rev = "c41ffd481d1e276b809df8e463eed2d53494fbeb" }
