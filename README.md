@@ -7,7 +7,9 @@ Currently there are 2 things need to do:
     lez method probably finds 
     then dont use correspondences corresponding to the moving objects 
     since we aligned now we can eliminate them
-
+    
+    
+    LEZ SAID WE SHOULD ALIGN ALL THE OBJECTS INCLUDING THE MOVING ONES! SO MAYBE NON HOMOGRAPHIC, MORE COMPLEX TRANSFORMATIONS LIKE https://graphics.cs.wisc.edu/Papers/2009/LGJA09/siggraph09_preprint.pdf CAN BE HELPFUL!
 
 
 
